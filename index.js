@@ -4699,7 +4699,7 @@ document.getElementById('oponenteNivel').addEventListener('click', () => {
 });
 
 document.getElementById('miNivel').addEventListener('click', () => {
-    const input = document.getElementById('miNivel');
-    input.focus();  // Foco en el input
-    input.click();  // Simula el clic para abrir el datalist
+    const input2 = document.getElementById('miNivel');
+    input2.focus();  // Foco en el input
+    input2.click();  // Simula el clic para abrir el datalist
 });
