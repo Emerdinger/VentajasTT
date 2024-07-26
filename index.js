@@ -4691,3 +4691,15 @@ boton.addEventListener('click', () => {
         })
     }
 })
+
+document.getElementById('oponenteNivel').addEventListener('click', () => {
+    const input = document.getElementById('oponenteNivel');
+    input.focus();  // Foco en el input
+    input.click();  // Simula el clic para abrir el datalist
+});
+
+document.getElementById('miNivel').addEventListener('click', () => {
+    const input = document.getElementById('miNivel');
+    input.focus();  // Foco en el input
+    input.click();  // Simula el clic para abrir el datalist
+});
