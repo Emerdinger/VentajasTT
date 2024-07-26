@@ -4679,7 +4679,10 @@ boton.addEventListener('click', () => {
                     if (ventaja.nombre == selectedValueOponent) {
                         if (ventaja.daVentaja) {
                             finalText.textContent = `Debes dar una ventaja de: ${ventaja.ventaja}`;
-                        } else{
+                        } else if (ventaja.ventaja == '0,0')  {
+                            finalText.textContent = `Tienen el mismo nivel, juegan mano a mano`;
+                        }
+                        else{
                             finalText.textContent = `Te deben dar una ventaja de: ${ventaja.ventaja}`;
                         }
                     }
