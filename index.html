@@ -11,21 +11,19 @@
 <body class="container">
     <div>
         <h1>Ventajas</h1>
-        <div>
-            <label for="niveles">Elije tu nivel</label>
-            <input type="text" multiple name="miNivel" id="miNivel" list="drawlevels" required size="64" readonly/>
-
-            <datalist id="drawlevels"><option></option>
-            </datalist>
+        <div class="divLista">
+            <label for="miNivel">Elije tu nivel</label>
+            <select name="miNivel" id="miNivel" required>
+                <option value="">Selecciona un nivel</option>
+            </select>
         </div>
-        <div>
-            <label for="niveles">Nivel de tu oponente</label>
-            <input type="text" multiple name="oponenteNivel" id="oponenteNivel" list="drawlevels" required size="64" readonly />
-
-            <datalist id="drawlevels"><option></option>
-            </datalist>
-        </div>
-        <div class="button-group">
+        <div class="divLista">
+            <label for="oponenteNivel">Nivel de tu oponente</label>
+            <select name="oponenteNivel" id="oponenteNivel" required>
+                <option value="">Selecciona un nivel</option>
+            </select>
+        </div class="divLista">
+        <div class="button-group divLista">
             <button id="verVentaja">Ver ventaja</button>
         </div>
         <p id="textoFinal"></p>

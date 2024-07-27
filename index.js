@@ -4653,20 +4653,31 @@ const ventajas = [
     }
 ];
 
-const dataList = document.getElementById('drawlevels')
-
-niveles.forEach(nivel => {
-    const option = document.createElement('option');
-    option.value = nivel;
-    dataList.appendChild(option);
-})
+// Obtengo todos los elementos que van a ser modificables del Html
 
 const boton = document.getElementById('verVentaja');
 const miNivel = document.getElementById('miNivel');
 const nivelOponente = document.getElementById('oponenteNivel');
 const finalText = document.getElementById('textoFinal');
 
+// Recorro todos los niveles para de esta forma crear las listas dinamicas con el array niveles
+niveles.forEach(nivel => {
+    const optionMiNivel = document.createElement('option');
+    const optionNivelOponente = document.createElement('option')
+
+    optionMiNivel.value = nivel;
+    optionMiNivel.textContent = nivel;
+
+    optionNivelOponente.value = nivel;
+    optionNivelOponente.textContent = nivel;
+
+    miNivel.appendChild(optionMiNivel);
+    nivelOponente.appendChild(optionNivelOponente);
+})
+
+// Se ejecuta al darle click al boton 
 boton.addEventListener('click', () => {
+    // guardo en una constante el valor del nivel tanto del mio como del oponente
     const selectedValue = miNivel.value;
     const selectedValueOponent = nivelOponente.value;
 
@@ -4691,15 +4702,3 @@ boton.addEventListener('click', () => {
         })
     }
 })
-
-document.getElementById('oponenteNivel').addEventListener('click', () => {
-    const input = document.getElementById('oponenteNivel');
-    input.focus();  // Foco en el input
-    input.click();  // Simula el clic para abrir el datalist
-});
-
-document.getElementById('miNivel').addEventListener('click', () => {
-    const input2 = document.getElementById('miNivel');
-    input2.focus();  // Foco en el input
-    input2.click();  // Simula el clic para abrir el datalist
-});
