@@ -4661,6 +4661,7 @@ const nivelOponente = document.getElementById('oponenteNivel');
 const finalText = document.getElementById('textoFinal');
 
 // Recorro todos los niveles para de esta forma crear las listas dinamicas con el array niveles
+
 niveles.forEach(nivel => {
     const optionMiNivel = document.createElement('option');
     const optionNivelOponente = document.createElement('option')
@@ -4676,8 +4677,10 @@ niveles.forEach(nivel => {
 })
 
 // Se ejecuta al darle click al boton 
+
 boton.addEventListener('click', () => {
     // guardo en una constante el valor del nivel tanto del mio como del oponente
+    
     const selectedValue = miNivel.value;
     const selectedValueOponent = nivelOponente.value;
 
